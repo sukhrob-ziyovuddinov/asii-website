@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import { initializeFirebase } from './lib/firebase';
 
 const firebaseState = initializeFirebase();
@@ -26,14 +27,17 @@ export default function App() {
   };
 
   return (
-    <main style={{ fontFamily: 'Inter, Arial, sans-serif', maxWidth: 900, margin: '2rem auto', padding: '1rem' }}>
-      <h1>ASII Sovereign</h1>
-      <p>Institutional fintech intelligence workspace.</p>
-      {!firebaseState.enabled && <p style={{ color: '#b45309' }}>{firebaseState.message}</p>}
-      <textarea value={prompt} onChange={(e) => setPrompt(e.target.value)} rows={4} style={{ width: '100%' }} placeholder="Ask ASII assistant" />
-      <button type="button" onClick={askAssistant} style={{ marginTop: '1rem' }}>Ask Gemini</button>
-      {error && <p style={{ color: '#b91c1c' }}>{error}</p>}
-      {result && <pre style={{ whiteSpace: 'pre-wrap' }}>{result}</pre>}
-    </main>
+    <>
+      <main style={{ fontFamily: 'Inter, Arial, sans-serif', maxWidth: 900, margin: '2rem auto', padding: '1rem' }}>
+        <h1>ASII Sovereign</h1>
+        <p>Institutional fintech intelligence workspace.</p>
+        {!firebaseState.enabled && <p style={{ color: '#b45309' }}>{firebaseState.message}</p>}
+        <textarea value={prompt} onChange={(e) => setPrompt(e.target.value)} rows={4} style={{ width: '100%' }} placeholder="Ask ASII assistant" />
+        <button type="button" onClick={askAssistant} style={{ marginTop: '1rem' }}>Ask Gemini</button>
+        {error && <p style={{ color: '#b91c1c' }}>{error}</p>}
+        {result && <pre style={{ whiteSpace: 'pre-wrap' }}>{result}</pre>}
+      </main>
+      <Analytics />
+    </>
   );
 }
