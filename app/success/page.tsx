@@ -5,7 +5,7 @@ export default function SuccessPage() {
   return (
     <Shell active="/success">
       <h2 className="mb-4 text-2xl font-semibold text-white">Pilot Success Criteria</h2>
-      <div className="grid gap-4 md:grid-cols-2">
+      <div className="grid gap-4 sm:grid-cols-2">
         <Card>
           <p><strong>Duration:</strong> 4 to 6 weeks</p>
           <p className="mt-2"><strong>Scope:</strong> one workflow, one team, one defined case type</p>
