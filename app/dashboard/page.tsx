@@ -41,11 +41,11 @@ export default function DashboardPage() {
     <Shell active="/dashboard">
       <div className="grid gap-4 lg:grid-cols-3">
         <Card className="lg:col-span-2">
-          <div className="flex items-center justify-between">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
             <h2 className="text-xl text-white">Travel Rule Queue</h2>
             <Badge>Demo Case Workflow</Badge>
           </div>
-          <div className="mt-4 grid gap-3 text-sm md:grid-cols-2">
+          <div className="mt-4 grid gap-3 text-sm sm:grid-cols-2">
             <p>Selected case: <span className="text-accent">{caseOpened ? caseId : "Not opened"}</span></p>
             <p>Case status: <span className="text-accent">{caseStatus}</span></p>
             <p>Evidence completeness: <span className="text-accent">{evidenceCompleteness}%</span></p>
@@ -53,7 +53,7 @@ export default function DashboardPage() {
           </div>
 
           <h3 className="mb-2 mt-5 font-medium text-blue-100">Demo Journey Controls</h3>
-          <div className="grid gap-2 md:grid-cols-2">
+          <div className="grid gap-2 sm:grid-cols-2">
             <button onClick={() => setCaseOpened(true)} className="rounded-lg border border-blue-300/25 bg-blue-500/10 px-3 py-2 text-left text-sm">Open {caseId} case</button>
             <button onClick={() => caseOpened && setAiSummary(true)} className="rounded-lg border border-blue-300/25 bg-blue-500/10 px-3 py-2 text-left text-sm">Generate AI Summary</button>
             <button onClick={() => aiSummary && setRiskDrafted(true)} className="rounded-lg border border-blue-300/25 bg-blue-500/10 px-3 py-2 text-left text-sm">Draft Risk Rationale</button>

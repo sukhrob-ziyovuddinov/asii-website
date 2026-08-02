@@ -13,7 +13,7 @@ export default function PilotPage() {
         <p className="mt-4 max-w-4xl text-sm text-blue-100/70">ASII is positioned as a financial crime intelligence infrastructure layer for UAE and MENA institutions, creating continuity across fragmented compliance signals and turning them into explainable, regulator-ready case outcomes.</p>
       </section>
 
-      <section className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+      <section className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
         {workflowSteps.map((step, i) => (
           <Card key={step.title}>
             <p className="text-xs text-accent">Step {i + 1}</p>
@@ -23,7 +23,7 @@ export default function PilotPage() {
         ))}
       </section>
 
-      <section className="mt-8 grid gap-4 md:grid-cols-3">
+      <section className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
         {[
           ["Proof", "Workflow clarity, defensible reporting"],
           ["Trust", "Explainability, auditability, human-in-the-loop"],

@@ -14,7 +14,7 @@ export default function SignalsPage() {
               <span className="text-xs text-blue-100/75">{s.id}</span>
             </div>
             <p className="mt-2 text-sm text-blue-100/80">{s.explanation}</p>
-            <div className="mt-3 grid gap-2 text-xs text-blue-100/70 md:grid-cols-4">
+            <div className="mt-3 grid gap-2 text-xs text-blue-100/70 sm:grid-cols-2 xl:grid-cols-4">
               <p>Source: {s.source}</p><p>Timestamp: {s.timestamp}</p><p>Confidence: {Math.round(s.confidence * 100)}%</p><p>Severity: {s.severity}</p>
             </div>
           </Card>
