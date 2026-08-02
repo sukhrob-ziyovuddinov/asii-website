@@ -4,8 +4,15 @@ import tseslint from 'typescript-eslint';
 
 export default [
   {
-    ignores: ['dist/**', 'node_modules/**', '.next/**'],
-  },
+  ignores: [
+  "dist/**",
+  "node_modules/**",
+  ".next/**",
+  "next-env.d.ts",
+  "**/next-env.d.ts",
+  "coverage/**",
+  "*.tsbuildinfo",
+],  
   js.configs.recommended,
   ...tseslint.configs.recommended,
   {
