@@ -1,9 +1,0 @@
-{
-  "/dashboard/page": "app/dashboard/page.js",
-  "/signals/page": "app/signals/page.js",
-  "/review/page": "app/review/page.js",
-  "/success/page": "app/success/page.js",
-  "/pilot/page": "app/pilot/page.js",
-  "/report/page": "app/report/page.js",
-  "/continuity/page": "app/continuity/page.js"
-}
