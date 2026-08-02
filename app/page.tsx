@@ -57,9 +57,9 @@ const workflowSteps = [
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-slate-950 text-blue-50">
+    <main className="min-h-screen text-blue-50">
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-10 sm:px-6 lg:px-8 lg:py-16">
-        <section className="rounded-2xl border border-cyan-400/20 bg-slate-900/70 p-6 shadow-2xl shadow-cyan-900/20 sm:p-8 lg:p-10">
+        <section className="rounded-2xl border border-cyan-400/20 bg-panel/80 p-6 shadow-2xl shadow-cyan-900/20 sm:p-8 lg:p-10">
           <Badge className="border-cyan-400/30 bg-cyan-500/10 text-cyan-100">ASII Continuity Pilot</Badge>
           <h1 className="mt-5 text-3xl font-semibold tracking-tight text-white sm:text-4xl lg:text-5xl">AI-native financial crime intelligence infrastructure for UAE &amp; MENA</h1>
           <p className="mt-5 max-w-4xl text-base leading-relaxed text-blue-100/80">ASII is building institutional infrastructure for financial crime intelligence, starting with a practical entry point: the ASII Continuity Pilot for Travel Rule, crypto risk, and case continuity.</p>
@@ -80,7 +80,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="rounded-xl border border-blue-300/15 bg-slate-900/50 p-6">
+        <section className="rounded-xl border border-blue-300/15 bg-panel/80 p-6">
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300">The problem</p>
           <h2 className="mt-3 text-2xl font-semibold text-white">Fragmented controls break case continuity.</h2>
           <div className="mt-6 grid gap-4 md:grid-cols-2">
@@ -93,7 +93,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="rounded-xl border border-blue-300/15 bg-slate-900/50 p-6">
+        <section className="rounded-xl border border-blue-300/15 bg-panel/80 p-6">
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300">Solution</p>
           <h2 className="mt-3 text-2xl font-semibold text-white">ASII Continuity Pilot</h2>
           <div className="mt-6 grid gap-4 md:grid-cols-3">
@@ -106,7 +106,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="rounded-xl border border-blue-300/15 bg-slate-900/50 p-6">
+        <section className="rounded-xl border border-blue-300/15 bg-panel/80 p-6">
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300">Workflow</p>
           <h2 className="mt-3 text-2xl font-semibold text-white">Workflow</h2>
           <div className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
