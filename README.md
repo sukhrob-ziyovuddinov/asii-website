@@ -1,86 +1,67 @@
 # ASII Website
 
-Official public website repository for **ASII** — an AI-native Financial Crime Intelligence Infrastructure platform focused on **UAE first** and **MENA second**.
+Official public website repository for **ASII — AI-Native Financial Crime Intelligence Infrastructure**.
 
-## Repository Purpose
+ASII is being developed for regulated institutions, with an initial market sequence of **UAE → Saudi Arabia → GCC → MENA**. Public language in this repository is intentionally conservative and must not imply customers, partnerships, regulatory approval, guaranteed compliance, or completed deployments without authoritative evidence.
 
-This repository contains ASII’s public-facing website and static presentation pages used for institutional communication, pilot framing, and market-facing positioning.
+## Current application
 
-It is maintained as the source of truth for ASII’s external website narrative, with language designed to remain conservative, reviewable, and suitable for regulated stakeholder audiences.
+- Framework: Next.js 15 App Router
+- UI: React 19 and Tailwind CSS 3
+- Language: strict TypeScript
+- Package manager: npm
+- Hosting: Vercel
+- Current public deployment: <https://sukhrob-ziyovuudinov.vercel.app>
 
-## Live Website
+The active application is defined by `app/`, `components/`, `data/`, and `lib/`. Historical static pages are retained only under `archive/` and are not part of the deployed application.
 
-- **Current live site:** https://sukhrob-ziyovuudinov.vercel.app
+## Public routes
 
-> Note: The live Vercel URL above remains unchanged unless a working ASII-branded domain is configured and deployed.
+- `/` — institutional overview
+- `/platform` — intelligence layer and integration model
+- `/services` — proposed Continuity Pilot
+- `/contact` — institutional enquiry route
 
-## ASII Positioning
+The repository also contains a synthetic interactive demo under `/pilot` and related routes. Demo data is not operational institution or customer data. Placeholder routes are excluded from the public sitemap until their content is complete.
 
-ASII is an **AI-native Financial Crime Intelligence Infrastructure** platform for regulated institutions operating across UAE and wider MENA.
+## Local development
 
-ASII is positioned as an intelligence and continuity overlay that helps teams connect fragmented signals into structured, human-reviewed, evidence-supported, and MLRO-reviewable workflows.
+```bash
+npm ci
+npm run dev
+```
 
-## Core Commercial Wedge
+Open the local URL printed by Next.js.
 
-**ASII Continuity Pilot**
+## Verification
 
-**Travel Rule + Crypto Risk + Case Continuity**
+```bash
+npm run lint
+npm run typecheck
+npm test
+npm run build
+```
 
-The pilot is designed to support practical workflow continuity:
+## Environment variables
 
-1. Signal intake
-2. Crypto risk context enrichment
-3. Case continuity tracking
-4. Analyst review
-5. MLRO escalation readiness
-6. Reporting preparation
+The current contact endpoint recognises the following server-side variables:
 
-ASII is an **overlay, not rip-and-replace** architecture.
+- `CRM_WEBHOOK_URL`
+- `CRM_WEBHOOK_SECRET`
 
-## Website Pages / Sections
+Never place webhook secrets or other credentials in frontend code or commit them to the repository.
 
-Current public pages in this repository:
+## Deployment
 
-- `index.html` (Home)
-- `services.html`
-- `investigations.html`
-- `resources.html`
-- `contact.html`
+Vercel is connected to the GitHub repository. CI is defined in `.github/workflows/nextjs-ci.yml`. Deployment, environment changes, commits, and pushes must be performed only with explicit owner authorisation.
 
-Supporting operational files include `sitemap.xml`, `robots.txt`, and deployment configuration artifacts.
+## Messaging guardrails
 
-## Operating Principles
+ASII should be described as infrastructure being developed for regulated institutions. Prefer language such as:
 
-All external website messaging should remain:
+- designed for regulated institutions;
+- intended to support human-reviewed workflows;
+- infrastructure for preserving investigative context;
+- regulator-ready reporting preparation.
 
-- Human-reviewed
-- Evidence-supported
-- MLRO-reviewable
-- Oriented to reporting preparation
-- Overlay-based (not rip-and-replace)
-- Appropriate for institutional and regulator-adjacent scrutiny
-
-## Deployment Note
-
-This repository is publicly visible and intended to represent the official ASII website codebase.
-
-Deployment is currently handled through Vercel. Keep all externally visible content presentation-ready, governance-safe, and consistent with ASII’s UAE-first / MENA-focused operating posture.
-
-## Public Links
-
-- Website: https://sukhrob-ziyovuudinov.vercel.app
-- Repository: https://github.com/sukhrob-ziyovuddinov/asii-website
-- LinkedIn: https://www.linkedin.com/company/asii-intelligence/
-
-## Compliance Language Guardrails
-
-This repository’s public language must avoid:
-
-- Regulatory approval claims
-- Customer claims
-- Partnership claims
-- Revenue claims
-- Licensing outcome claims
-- Autonomous compliance decision claims
-
-ASII materials must not imply legal advice or fully autonomous AML/compliance decisioning. Public claims should remain conservative, review-friendly, and evidentially defensible.
+Do not claim regulatory approval, legal compliance guarantees, certifications, customers, partnerships, integrations, performance metrics, or completed deployments unless verified evidence is present.

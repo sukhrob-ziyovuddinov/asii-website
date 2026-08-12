@@ -10,15 +10,15 @@ import {
 export const platformCapabilities = [
   {
     icon: ShieldCheck,
-    title: "Travel Rule Compliance",
+    title: "Signal and Control Intelligence",
     description:
-      "Structured Travel Rule workflows for VASP counterparties, built around UAE and MENA regulatory expectations rather than adapted from global templates.",
+      "A shared investigative frame for transaction monitoring, sanctions, Travel Rule, adverse-media, identity, and blockchain signals.",
   },
   {
     icon: Fingerprint,
-    title: "Crypto Risk Assessment",
+    title: "Entity and Relationship Context",
     description:
-      "Wallet and counterparty risk scoring designed to produce evidence-supported outputs an MLRO can defend, not just a risk number.",
+      "Context designed to connect people, organisations, accounts, wallets, counterparties, ownership, events, and prior decisions.",
   },
   {
     icon: GitBranch,
@@ -30,32 +30,32 @@ export const platformCapabilities = [
     icon: FileCheck2,
     title: "Evidence-Supported Artifacts",
     description:
-      "Every output is traceable to its underlying signal, keeping review and reporting outputs defensible under regulatory scrutiny.",
+      "Outputs are intended to retain links to underlying signals and evidence so analysts and reviewers can inspect how a conclusion was formed.",
   },
   {
     icon: Layers,
     title: "MLRO-Reviewable Outputs",
     description:
-      "Reporting layers structured for direct MLRO review, reducing translation work between analyst findings and regulatory submission.",
+      "Structured intelligence packages designed to support MLRO review and downstream reporting preparation without replacing accountable judgement.",
   },
   {
     icon: PlugZap,
     title: "Overlay Integration",
     description:
-      "Deploys alongside existing case management and core systems, without requiring institutions to replace what already works.",
+      "An integration model intended to operate alongside existing case-management and control systems rather than requiring wholesale replacement.",
   },
 ];
 
 export const integrationPrinciples = [
-  "No rip-and-replace: ASII sits alongside existing case management and compliance systems.",
-  "API-first data exchange, built to fit institutional data governance requirements.",
-  "Phased rollout through the ASII Continuity Pilot before broader deployment.",
-  "Configurable to jurisdiction-specific reporting formats across the UAE and MENA.",
+  "Overlay by design: connect existing case-management, screening, monitoring, and intelligence workflows.",
+  "Data exchange patterns intended to support institutional security, access, and governance requirements.",
+  "Phased validation through a scoped Continuity Pilot before considering broader adoption.",
+  "Reporting preparation that can be configured around an institution's approved policies and jurisdictional obligations.",
 ];
 
 export const deploymentPrinciples = [
-  "Evidence-linked audit trail on every case from day one.",
-  "MLRO-reviewable outputs, not raw model scores.",
-  "Access and review controls aligned to institutional governance structures.",
-  "Designed for regulated environments: DIFC, ADGM, and VARA-relevant workflows.",
+  "Evidence continuity designed into case and output workflows.",
+  "Reviewable rationale rather than reliance on opaque model scores.",
+  "Human approval points and access controls shaped around institutional governance.",
+  "Regional design context without claiming regulatory approval or guaranteed compliance.",
 ];

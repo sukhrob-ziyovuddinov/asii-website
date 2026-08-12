@@ -26,8 +26,14 @@ jobs:
       - name: Lint
         run: npm run lint
 
+      - name: Format check
+        run: npm run format:check
+
       - name: Type check
-        run: npx tsc --noEmit
+        run: npm run typecheck
+
+      - name: Tests
+        run: npm test
 
       - name: Production build
         run: npm run build

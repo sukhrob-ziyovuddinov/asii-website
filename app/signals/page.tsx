@@ -1,11 +1,19 @@
+import type { Metadata } from "next";
 import { Shell } from "@/components/layout/shell";
 import { Card } from "@/components/ui/card";
 import { signals } from "@/data/mock-data";
 
+export const metadata: Metadata = {
+  title: "Synthetic Signals Demo",
+  robots: { index: false, follow: false },
+};
+
 export default function SignalsPage() {
   return (
     <Shell active="/signals">
-      <h2 className="mb-4 text-2xl font-semibold text-white">Fragmented Signals Module</h2>
+      <h1 className="mb-4 text-2xl font-semibold text-white">
+        Fragmented Signals Module
+      </h1>
       <div className="space-y-3">
         {signals.map((s) => (
           <Card key={s.id}>
@@ -15,7 +23,10 @@ export default function SignalsPage() {
             </div>
             <p className="mt-2 text-sm text-blue-100/80">{s.explanation}</p>
             <div className="mt-3 grid gap-2 text-xs text-blue-100/70 sm:grid-cols-2 xl:grid-cols-4">
-              <p>Source: {s.source}</p><p>Timestamp: {s.timestamp}</p><p>Confidence: {Math.round(s.confidence * 100)}%</p><p>Severity: {s.severity}</p>
+              <p>Source: {s.source}</p>
+              <p>Timestamp: {s.timestamp}</p>
+              <p>Confidence: {Math.round(s.confidence * 100)}%</p>
+              <p>Severity: {s.severity}</p>
             </div>
           </Card>
         ))}

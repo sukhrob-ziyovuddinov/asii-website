@@ -1,41 +1,24 @@
 import { NextResponse } from "next/server";
-
-const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+import { isHoneypotSubmission, parseContactSubmission } from "@/lib/contact";
 
 export async function POST(request: Request) {
   try {
-    const body = await request.json();
-
-    const {
-      name,
-      email,
-      organisation,
-      role,
-      institutionType,
-      useCase,
-      timeframe,
-      message,
-      website,
-    } = body ?? {};
+    const body: unknown = await request.json();
 
     // Honeypot anti-spam field
-    if (website) {
+    if (isHoneypotSubmission(body)) {
       return NextResponse.json({ ok: true });
     }
 
-    if (
-      typeof name !== "string" ||
-      name.trim().length < 2 ||
-      typeof email !== "string" ||
-      !EMAIL_RE.test(email) ||
-      typeof organisation !== "string" ||
-      organisation.trim().length < 2 ||
-      typeof message !== "string" ||
-      message.trim().length < 10
-    ) {
+    const submission = parseContactSubmission(body);
+
+    if (!submission) {
       return NextResponse.json(
-        { ok: false, error: "Please provide valid contact details and message." },
-        { status: 400 }
+        {
+          ok: false,
+          error: "Please provide valid contact details and message.",
+        },
+        { status: 400 },
       );
     }
 
@@ -45,7 +28,7 @@ export async function POST(request: Request) {
     if (!webhookUrl) {
       return NextResponse.json(
         { ok: false, error: "Lead capture is not configured yet." },
-        { status: 503 }
+        { status: 503 },
       );
     }
 
@@ -57,24 +40,12 @@ export async function POST(request: Request) {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          ...(webhookSecret
-            ? { "X-ASII-Webhook-Secret": webhookSecret }
-            : {}),
+          ...(webhookSecret ? { "X-ASII-Webhook-Secret": webhookSecret } : {}),
         },
         body: JSON.stringify({
           source: "ASII website",
           submittedAt: new Date().toISOString(),
-          name: name.trim(),
-          email: email.trim(),
-          organisation: organisation.trim(),
-          role: typeof role === "string" ? role.trim() : "",
-          institutionType:
-            typeof institutionType === "string"
-              ? institutionType.trim()
-              : "",
-          useCase: typeof useCase === "string" ? useCase.trim() : "",
-          timeframe: typeof timeframe === "string" ? timeframe.trim() : "",
-          message: message.trim(),
+          ...submission,
         }),
         signal: controller.signal,
       });
@@ -82,7 +53,7 @@ export async function POST(request: Request) {
       if (!response.ok) {
         return NextResponse.json(
           { ok: false, error: "Unable to submit your request right now." },
-          { status: 502 }
+          { status: 502 },
         );
       }
     } finally {
@@ -93,7 +64,7 @@ export async function POST(request: Request) {
   } catch {
     return NextResponse.json(
       { ok: false, error: "Unexpected server error." },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
