@@ -11,7 +11,7 @@ ASII is being developed for regulated institutions, with an initial market seque
 - Language: strict TypeScript
 - Package manager: npm
 - Hosting: Vercel
-- Current public deployment: <https://sukhrob-ziyovuddinov.vercel.app>
+- Current public deployment: <https://asii-website.vercel.app>
 
 The active application is defined by `app/`, `components/`, `data/`, and `lib/`. Historical static pages are retained only under `archive/` and are not part of the deployed application.
 
