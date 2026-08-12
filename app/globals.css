@@ -8,7 +8,13 @@
 
 body {
   @apply bg-bg text-text antialiased;
-  background-image: radial-gradient(circle at 15% 10%, rgba(35,164,255,0.22), transparent 35%), radial-gradient(circle at 85% 0%, rgba(47,111,255,0.2), transparent 25%);
+  background-image: radial-gradient(circle at 15% 10%, rgba(103,232,249,0.06), transparent 34%), radial-gradient(circle at 85% 0%, rgba(47,111,255,0.04), transparent 24%);
+  background-color: #05070b;
+}
+
+::selection {
+  background-color: rgba(103, 232, 249, 0.24);
+  color: #f5f7ff;
 }
 
 .network-grid {
