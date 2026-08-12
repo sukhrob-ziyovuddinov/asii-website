@@ -1,15 +1,31 @@
+import type { Metadata } from "next";
 import { Shell } from "@/components/layout/shell";
 import { Card } from "@/components/ui/card";
+
+export const metadata: Metadata = {
+  title: "Pilot Success Criteria Demo",
+  robots: { index: false, follow: false },
+};
 
 export default function SuccessPage() {
   return (
     <Shell active="/success">
-      <h2 className="mb-4 text-2xl font-semibold text-white">Pilot Success Criteria</h2>
+      <h1 className="mb-4 text-2xl font-semibold text-white">
+        Pilot Success Criteria
+      </h1>
       <div className="grid gap-4 sm:grid-cols-2">
         <Card>
-          <p><strong>Duration:</strong> 4 to 6 weeks</p>
-          <p className="mt-2"><strong>Scope:</strong> one workflow, one team, one defined case type</p>
-          <p className="mt-4 text-sm text-blue-100/75">Low-friction pilot. No rip-and-replace. Built to prove operational value before enterprise expansion.</p>
+          <p>
+            <strong>Duration:</strong> 4 to 6 weeks
+          </p>
+          <p className="mt-2">
+            <strong>Scope:</strong> one workflow, one team, one defined case
+            type
+          </p>
+          <p className="mt-4 text-sm text-blue-100/75">
+            Low-friction pilot. No rip-and-replace. Built to prove operational
+            value before enterprise expansion.
+          </p>
         </Card>
         <Card>
           <h3 className="text-white font-medium">Success Metrics</h3>

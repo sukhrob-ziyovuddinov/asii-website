@@ -8,12 +8,17 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
       disallow: [
+        "/pilot",
         "/dashboard",
+        "/signals",
+        "/continuity",
         "/review",
         "/report",
-        "/success"
-      ]
+        "/success",
+        "/investigations",
+        "/resources",
+      ],
     },
-    sitemap: `${baseUrl}/sitemap.xml`
+    sitemap: `${baseUrl}/sitemap.xml`,
   };
 }

@@ -4,7 +4,7 @@ const config: Config = {
   content: [
     "./app/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
-    "./data/**/*.{ts,tsx}"
+    "./data/**/*.{ts,tsx}",
   ],
   theme: {
     extend: {
@@ -19,14 +19,14 @@ const config: Config = {
         accent: "#67e8f9",
         text: "#f5f7ff",
         textSecondary: "#a8b5cf",
-        textMuted: "#7b89a8"
+        textMuted: "#7b89a8",
       },
       backgroundImage: {
-        grid: "linear-gradient(rgba(47,111,255,0.12) 1px, transparent 1px), linear-gradient(90deg, rgba(47,111,255,0.12) 1px, transparent 1px)"
-      }
-    }
+        grid: "linear-gradient(rgba(47,111,255,0.12) 1px, transparent 1px), linear-gradient(90deg, rgba(47,111,255,0.12) 1px, transparent 1px)",
+      },
+    },
   },
-  plugins: []
+  plugins: [],
 };
 
 export default config;
