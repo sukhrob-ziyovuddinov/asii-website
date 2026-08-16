@@ -1,0 +1,63 @@
+name: Bug report
+description: Report a reproducible defect without confidential or regulated data
+title: "bug: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not include credentials, personal data, customer data, bank data, or raw investigative evidence. Report security vulnerabilities through the private security channel.
+  - type: dropdown
+    id: impact
+    attributes:
+      label: Impact area
+      options:
+        - Availability or deployment
+        - Authentication or authorization
+        - Case or investigation continuity
+        - Evidence provenance or auditability
+        - AI-assisted output or provider handling
+        - User interface or accessibility
+        - Documentation or developer experience
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: What happened and what should have happened?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Safe reproduction steps
+      description: Use synthetic data and redact sensitive values.
+      placeholder: "1. ...\n2. ...\n3. ..."
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Sanitized logs, test output, commit SHA, route, browser, or runtime version.
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Suspected priority
+      options:
+        - P0 - active critical exposure or destructive risk
+        - P1 - material security, integrity, reliability, or auditability risk
+        - P2 - testing, observability, documentation, or maintainability weakness
+        - P3 - cleanup, consistency, or minor UX
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirmations
+    attributes:
+      label: Confirmations
+      options:
+        - label: I used only synthetic or fully redacted evidence.
+          required: true
+        - label: I did not include a secret or exploitable security detail.
+          required: true
