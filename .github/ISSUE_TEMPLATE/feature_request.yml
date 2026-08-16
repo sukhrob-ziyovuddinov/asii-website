@@ -1,0 +1,56 @@
+name: Controlled change proposal
+description: Propose a capability or control aligned with ASII investigative continuity
+title: "proposal: "
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Institutional problem
+      description: Describe the investigator, reviewer, MLRO, governance, or operational problem.
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Required outcome
+      description: Define the smallest measurable result, not a preferred technology.
+    validations:
+      required: true
+  - type: dropdown
+    id: control
+    attributes:
+      label: Primary control affected
+      options:
+        - Investigative continuity
+        - Evidence provenance and lineage
+        - Human review and decision governance
+        - Authentication, authorization, or tenant isolation
+        - Auditability and report reconstruction
+        - AI-output governance
+        - Reliability or operability
+        - Public website accuracy
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: List objective checks that prove completion.
+    validations:
+      required: true
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risks, dependencies, and rollback
+    validations:
+      required: true
+  - type: checkboxes
+    id: guardrails
+    attributes:
+      label: Guardrails
+      options:
+        - label: The proposal preserves explicit human decision authority.
+          required: true
+        - label: The proposal does not require real regulated data for development or demonstration.
+          required: true
