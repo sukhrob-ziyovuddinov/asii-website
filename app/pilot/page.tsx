@@ -48,7 +48,10 @@ export default function PilotPage() {
         {[
           ["Proof", "Continuity, evidence lineage, reviewable output"],
           ["Trust", "Human review, auditability, explicit decision context"],
-          ["Evaluation Entry", "Scoped assessment, synthetic data, no rip-and-replace"],
+          [
+            "Evaluation Entry",
+            "Scoped assessment, synthetic data, no rip-and-replace",
+          ],
         ].map(([title, copy]) => (
           <Card key={title}>
             <h3 className="text-xl font-medium text-white">{title}</h3>
