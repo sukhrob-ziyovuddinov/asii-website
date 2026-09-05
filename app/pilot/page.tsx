@@ -27,8 +27,8 @@ export default function PilotPage() {
           intelligence infrastructure for regulated institutions. The current
           Tajikistan evaluation track demonstrates how fragmented signals can
           retain evidence lineage, investigation context, accountable human
-          review, and regulator-ready output without using live institutional
-          or customer data.
+          review, and regulator-ready output without using live institutional or
+          customer data.
         </p>
       </section>
 
