@@ -60,7 +60,7 @@ export default function OpenGraphImage() {
             padding: "10px 18px",
           }}
         >
-          UAE · Saudi Arabia · GCC · MENA
+          Tajikistan · Evaluation Track
         </div>
       </div>
 
@@ -75,7 +75,7 @@ export default function OpenGraphImage() {
             textTransform: "uppercase",
           }}
         >
-          AI-native intelligence infrastructure
+          Continuity-native intelligence infrastructure
         </div>
         <div
           style={{
