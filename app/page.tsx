@@ -73,15 +73,16 @@ export default function HomePage() {
               handoff.
             </h1>
             <p className="mt-6 max-w-4xl text-base leading-relaxed text-textSecondary sm:text-lg">
-              ASII is being developed as an AI-native intelligence
-              infrastructure layer for regulated institutions. It is intended to
+              ASII is being developed as continuity-native intelligence
+              infrastructure for regulated institutions. It is intended to
               connect fragmented signals while preserving relationships,
               chronology, evidence, and investigative reasoning across systems,
               teams, institutions, and jurisdictions.
             </p>
             <p className="mt-4 max-w-4xl text-sm leading-relaxed text-textMuted">
-              Initial market focus: UAE, followed by Saudi Arabia, the GCC, and
-              wider MENA.
+              Current institutional evaluation track: Tajikistan. The core
+              platform remains jurisdiction-neutral and broader expansion stays
+              separate from this evaluation gate.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
               <Link
@@ -289,15 +290,15 @@ export default function HomePage() {
         <section className="grid gap-6 lg:grid-cols-2">
           <div className="rounded-2xl border border-subtle bg-panel/80 p-6 sm:p-8">
             <SectionHeading
-              eyebrow="UAE and MENA relevance"
-              title="Built with cross-border complexity in view."
-              description="The region combines significant cross-border financial flows, evolving digital-asset frameworks, sanctions exposure, and institutions operating across local and international expectations. ASII is being developed for this multi-jurisdictional reality without presenting technology as a substitute for legal or regulatory judgement."
+              eyebrow="Tajikistan evaluation relevance"
+              title="A jurisdiction layer without rebuilding the core."
+              description="The ASII core remains jurisdiction-neutral. The current evaluation track focuses on Tajikistan, treating local regulatory context and language requirements as additive layers while preserving the same evidence, continuity, human-review, and auditability controls."
             />
           </div>
           <div className="rounded-2xl border border-subtle bg-panelElevated/70 p-6 sm:p-8">
             <SectionHeading
               eyebrow="Governance principles"
-              title="AI-native, with accountable human review."
+              title="Continuity-native, with accountable human review."
             />
             <ul className="mt-6 space-y-4">
               {governancePrinciples.map((principle) => (
