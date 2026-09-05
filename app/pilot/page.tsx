@@ -15,18 +15,20 @@ export default function PilotPage() {
   return (
     <Shell active="/pilot">
       <section className="mb-8">
-        <Badge>Investor + Enterprise Demo</Badge>
+        <Badge>Controlled Institutional Demo</Badge>
         <h1 className="mt-3 text-4xl font-semibold tracking-tight text-white">
           ASII Continuity Pilot
         </h1>
         <p className="mt-2 text-lg text-blue-100/85">
-          One workflow. One team. One pilot cycle. Clear success criteria.
+          One workflow. One team. One evaluation cycle. Clear success criteria.
         </p>
         <p className="mt-4 max-w-4xl text-sm text-blue-100/70">
-          ASII is positioned as a financial crime intelligence infrastructure
-          layer for UAE and MENA institutions, creating continuity across
-          fragmented compliance signals and turning them into explainable,
-          regulator-ready case outcomes.
+          ASII is being developed as continuity-native financial crime
+          intelligence infrastructure for regulated institutions. The current
+          Tajikistan evaluation track demonstrates how fragmented signals can
+          retain evidence lineage, investigation context, accountable human
+          review, and regulator-ready output without using live institutional
+          or customer data.
         </p>
       </section>
 
@@ -44,9 +46,9 @@ export default function PilotPage() {
 
       <section className="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
         {[
-          ["Proof", "Workflow clarity, defensible reporting"],
-          ["Trust", "Explainability, auditability, human-in-the-loop"],
-          ["Commercial Entry", "Low-friction pilot, no rip-and-replace"],
+          ["Proof", "Continuity, evidence lineage, reviewable output"],
+          ["Trust", "Human review, auditability, explicit decision context"],
+          ["Evaluation Entry", "Scoped assessment, synthetic data, no rip-and-replace"],
         ].map(([title, copy]) => (
           <Card key={title}>
             <h3 className="text-xl font-medium text-white">{title}</h3>
