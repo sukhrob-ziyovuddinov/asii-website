@@ -7,8 +7,9 @@ export function SiteFooter() {
         <div className="max-w-3xl">
           <p className="font-medium text-text">ASII</p>
           <p className="mt-2 leading-relaxed">
-            AI-native financial crime intelligence infrastructure being
-            developed for regulated institutions across the UAE and MENA.
+            Continuity-native financial crime intelligence infrastructure being
+            developed for regulated institutions, preserving investigation
+            context, evidence lineage, and human-reviewed decision history.
           </p>
           <p className="mt-2 text-xs leading-relaxed">
             ASII is intended to support human-reviewed workflows and

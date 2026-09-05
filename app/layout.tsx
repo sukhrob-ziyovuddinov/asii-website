@@ -10,20 +10,19 @@ export const metadata: Metadata = {
     template: "%s | ASII",
   },
   description:
-    "AI-native financial crime intelligence infrastructure being developed for regulated institutions across the UAE and MENA.",
+    "Continuity-native financial crime intelligence infrastructure being developed for regulated institutions, with human-reviewed investigation and regulator-ready reporting workflows.",
   applicationName: "ASII",
   keywords: [
     "financial crime intelligence",
     "AML/CFT",
-    "Travel Rule",
-    "crypto risk",
-    "case continuity",
-    "UAE",
-    "MENA",
+    "investigation continuity",
+    "evidence lineage",
+    "human review",
+    "regulator-ready reporting",
+    "Tajikistan",
   ],
   openGraph: {
     type: "website",
-    locale: "en_AE",
     siteName: "ASII",
     title: "ASII | Financial Crime Intelligence Infrastructure",
     description:
