@@ -1,15 +1,16 @@
 # ASII Website
 
-Official public website repository for **ASII — AI-Native Financial Crime Intelligence Infrastructure**.
+Official public website repository for **ASII — Continuity-Native Financial Crime Intelligence Infrastructure**.
 
-ASII is being developed for regulated institutions, with an initial market sequence of **UAE → Saudi Arabia → GCC → MENA**. Public language in this repository is intentionally conservative and must not imply customers, partnerships, regulatory approval, guaranteed compliance, or completed deployments without authoritative evidence.
+ASII is being developed for regulated institutions. The current institutional-entry and evaluation track focuses on **Tajikistan** while the core platform remains jurisdiction-neutral. Broader jurisdictional expansion is separate from the September evaluation gate. Public language in this repository is intentionally conservative and must not imply customers, partnerships, regulatory approval, guaranteed compliance, or completed deployments without authoritative evidence.
 
 ## Current application
 
-- Framework: Next.js 15 App Router
+- Framework: Next.js 16 App Router
 - UI: React 19 and Tailwind CSS 3
 - Language: strict TypeScript
 - Package manager: npm
+- Runtime policy: Node.js 22.x
 - Hosting: Vercel
 - Current public deployment: <https://asii-intelligence.vercel.app>
 
@@ -22,7 +23,7 @@ The active application is defined by `app/`, `components/`, `data/`, and `lib/`.
 - `/services` — proposed Continuity Pilot
 - `/contact` — institutional enquiry route
 
-The repository also contains a synthetic interactive demo under `/pilot` and related routes. Demo data is not operational institution or customer data. Placeholder routes are excluded from the public sitemap until their content is complete.
+The repository also contains a synthetic controlled demo under `/pilot` and related routes. Demo data is not operational institution or customer data. The current Tajikistan evaluation track is intended to demonstrate investigation continuity, evidence lineage, accountable human review, and regulator-ready output without implying an active institutional pilot. Placeholder routes are excluded from the public sitemap until their content is complete.
 
 ## Local development
 
@@ -59,9 +60,11 @@ Vercel is connected to the GitHub repository. CI is defined in `.github/workflow
 
 ASII should be described as infrastructure being developed for regulated institutions. Prefer language such as:
 
+- continuity-native financial crime intelligence infrastructure;
 - designed for regulated institutions;
 - intended to support human-reviewed workflows;
-- infrastructure for preserving investigative context;
-- regulator-ready reporting preparation.
+- infrastructure for preserving investigative context and evidence lineage;
+- regulator-ready reporting preparation;
+- current Tajikistan institutional evaluation track, where relevant.
 
-Do not claim regulatory approval, legal compliance guarantees, certifications, customers, partnerships, integrations, performance metrics, or completed deployments unless verified evidence is present.
+Do not claim regulatory approval, legal compliance guarantees, certifications, customers, partnerships, integrations, performance metrics, controlled PoC acceptance, pilot status, or completed deployments unless verified evidence is present.
