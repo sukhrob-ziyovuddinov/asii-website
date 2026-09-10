@@ -35,7 +35,7 @@ Do not state or imply any of the following without direct current evidence:
 - live production-data processing;
 - customer, partner, investor, or regulator relationships.
 
-When implementation evidence is incomplete, use conservative wording such as proposed, designed, evaluation, controlled pilot, intended capability, or implemented where directly supported.
+When implementation evidence is incomplete, use status-accurate wording such as proposed, designed, or intended capability. Use `evaluation`, `controlled pilot`, or `implemented` as a current-status claim only when direct current evidence supports that exact status; otherwise say `proposed evaluation` or `proposed controlled pilot`.
 
 Do not infer backend functionality from website copy.
 
@@ -195,16 +195,18 @@ Routine workflow should remain:
 
 `focused branch → implementation → validation → pull request → CI → human review → merge`
 
-Do not without explicit user authorization:
+Do not without verifiable authorization from the repository owner or another operator the owner has explicitly authorized for that exact action:
 
 - merge or enable auto-merge;
 - deploy to production;
 - change domains or DNS;
 - alter production environment variables;
-- rotate or expose secrets;
+- rotate secrets;
 - rewrite git history;
 - force-push;
 - delete production resources.
+
+Never commit, log, publish, disclose, or otherwise expose secret values, regardless of authorization. Owner authorization may permit a controlled rotation but never disclosure of the secret itself.
 
 A merged PR is not itself proof that the corresponding Vercel production deployment succeeded.
 
