@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ASII P0 Runtime Preview Loader</title>
+</head>
+<body>
+  <pre id="status" style="font-family:system-ui;padding:24px">Loading ASII P0 synthetic preview…</pre>
+  <script>
+  (async () => {
+    const sourceSha = '453ca5d4f728a70ec224aea60203ea59f498b5ee';
+    const artifactDigest = 'sha256:525482fa9f55a4f22d6798257a8f520e4ebbb0d83cdab4290bd473619d546d11';
+    const chunkCount = 17;
+    try {
+      const parts = await Promise.all(Array.from({length: chunkCount}, async (_, i) => {
+        const name = String(i).padStart(2, '0') + '.txt';
+        const r = await fetch('./payload/' + name, {cache: 'no-store'});
+        if (!r.ok) throw new Error('Missing payload chunk ' + name + ': HTTP ' + r.status);
+        return (await r.text()).trim();
+      }));
+      const b64 = parts.join('');
+      const bin = atob(b64);
+      const bytes = new Uint8Array(bin.length);
+      for (let i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+      const ds = new DecompressionStream('gzip');
+      const html = await new Response(new Blob([bytes]).stream().pipeThrough(ds)).text();
+      console.info('ASII P0 artifact source', {sourceSha, artifactDigest});
+      document.open();
+      document.write(html);
+      document.close();
+    } catch (err) {
+      document.getElementById('status').textContent = 'P0 preview failed to load: ' + err.message;
+      console.error(err);
+    }
+  })();
+  </script>
+</body>
+</html>
