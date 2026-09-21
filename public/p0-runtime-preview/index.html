@@ -11,10 +11,9 @@
   (async () => {
     const sourceSha = '453ca5d4f728a70ec224aea60203ea59f498b5ee';
     const artifactDigest = 'sha256:525482fa9f55a4f22d6798257a8f520e4ebbb0d83cdab4290bd473619d546d11';
-    const chunkCount = 17;
+    const files = ['00.txt','01.txt','02-03.txt','04-05.txt','06-07.txt','08-09.txt','10-11.txt','12-13.txt','14-15.txt','16.txt'];
     try {
-      const parts = await Promise.all(Array.from({length: chunkCount}, async (_, i) => {
-        const name = String(i).padStart(2, '0') + '.txt';
+      const parts = await Promise.all(files.map(async (name) => {
         const r = await fetch('./payload/' + name, {cache: 'no-store'});
         if (!r.ok) throw new Error('Missing payload chunk ' + name + ': HTTP ' + r.status);
         return (await r.text()).trim();
