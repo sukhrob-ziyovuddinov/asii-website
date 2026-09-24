@@ -23,8 +23,13 @@ export default function ReportPage() {
   return (
     <Shell active="/report">
       <h1 className="mb-4 text-2xl font-semibold text-white">
-        Regulator-Ready Report Generator
+        Human-Reviewed Reporting Preparation Demo
       </h1>
+      <p className="mb-6 max-w-3xl text-sm leading-relaxed text-blue-100/70">
+        Synthetic demonstration only. The output is reviewable working material
+        for reporting preparation and does not represent regulator approval,
+        acceptance, filing readiness, or a production reporting state.
+      </p>
       <div className="grid gap-4 lg:grid-cols-3">
         <Card className="lg:col-span-2">
           <ul className="space-y-2 text-sm text-blue-100/80">
