@@ -4,13 +4,13 @@ import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 
 export const metadata: Metadata = {
-  title: "Continuity Pilot",
+  title: "Controlled Evaluation & Pilot Path",
   description:
-    "A focused ASII pilot for Travel Rule, crypto risk, case continuity, human review, and MLRO-ready reporting preparation.",
+    "A proposed controlled evaluation path for case continuity, evidence lineage, human review, and reporting preparation, with any later PoC or pilot subject to separate institutional agreement.",
   alternates: { canonical: "/services" },
 };
 
-const pilotPlanSteps = [
+const laterStagePilotPlanSteps = [
   {
     title: "Days 0–15",
     description: "Workflow scoping and signal mapping across current systems.",
@@ -43,26 +43,27 @@ export default function ServicesPage() {
       <div className="mx-auto flex max-w-6xl flex-col gap-8">
         <section className="rounded-2xl border border-subtle bg-panel/95 p-6 shadow-[0_12px_40px_rgba(2,6,23,0.24)] sm:p-8 lg:p-10">
           <Badge className="border-subtle bg-panelElevated/80 text-textSecondary">
-            ASII Continuity Pilot
+            Controlled institutional evaluation
           </Badge>
           <h1 className="mt-5 text-3xl font-semibold tracking-tight text-white sm:text-4xl lg:text-5xl">
-            ASII Continuity Pilot
+            ASII Controlled Evaluation Path
           </h1>
           <p className="mt-5 max-w-4xl text-base leading-relaxed text-textSecondary">
-            A proposed 90-day engagement for testing Travel Rule, crypto risk,
-            and case continuity workflows within a controlled institutional
-            scope.
+            The current Tajikistan entry path begins with a proposed controlled
+            institutional evaluation of up to 30 calendar days after formal
+            scope agreement, using synthetic data by default.
           </p>
           <p className="mt-4 max-w-4xl text-sm leading-relaxed text-textMuted">
-            The pilot is intended to validate workflow fit, evidence continuity,
-            and human-review requirements before any broader adoption decision.
+            Any later controlled PoC or pilot is a separate stage requiring
+            institution-agreed scope, security and data boundaries, success
+            criteria, owners, and progression authorization.
           </p>
           <div className="mt-6 flex flex-col gap-3 sm:flex-row">
             <Link
               href="/contact"
               className="inline-flex items-center justify-center rounded-md border border-subtle bg-panelElevated/80 px-4 py-2 text-sm font-medium text-text transition hover:border-strong hover:bg-panelElevated"
             >
-              Discuss the Continuity Pilot
+              Discuss a controlled evaluation
             </Link>
             <Link
               href="/signals"
@@ -75,13 +76,18 @@ export default function ServicesPage() {
 
         <section className="rounded-xl border border-subtle bg-panel/95 p-6">
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-cyan-300">
-            90-day pilot plan
+            Later-stage framework
           </p>
           <h2 className="mt-3 text-2xl font-semibold text-white">
-            90-day pilot plan
+            Illustrative 90-day pilot framework
           </h2>
+          <p className="mt-3 max-w-4xl text-sm leading-relaxed text-textMuted">
+            This is a proposed later-stage framework, not the current controlled
+            evaluation and not an institution-agreed commitment. It applies only
+            if a separate PoC or pilot is authorized after evaluation.
+          </p>
           <div className="mt-6 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
-            {pilotPlanSteps.map((step, index) => (
+            {laterStagePilotPlanSteps.map((step, index) => (
               <Card key={step.title}>
                 <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-300">
                   {index + 1}
@@ -107,9 +113,10 @@ export default function ServicesPage() {
           <div className="mt-6 grid gap-4 lg:grid-cols-[1.1fr_0.9fr]">
             <Card>
               <p className="text-sm leading-relaxed text-textSecondary">
-                The pilot is designed to create a practical operating rhythm for
-                analysts and reviewers, with outputs that remain grounded in
-                evidence and ready for downstream reporting preparation.
+                A later-stage pilot would test whether the operating model
+                creates measurable continuity and review value for analysts and
+                reviewers while keeping outputs grounded in evidence and subject
+                to accountable human review.
               </p>
             </Card>
             <Card>
